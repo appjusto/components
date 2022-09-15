@@ -1,0 +1,35 @@
+{
+  "name": "@appjusto/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm version ${VERSION:-patch} && npm publish --access public",
+    "postversion": "git push && git push --tags && git fetch"
+  },
+  "author": "AppJusto",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@appjusto/types": "^7.14.5",
+    "@types/react": "^16.14.32",
+    "@types/react-router-dom": "^5.3.3",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@rooks/use-visibility-sensor": "^4.11.2",
+    "browser-image-compression": "^1.0.17",
+    "dayjs": "^1.11.5",
+    "react": "^17.0.2",
+    "react-dropzone": "^11.7.1",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^5.3.3",
+    "react-select": "^4.3.1"
+  }
+}
