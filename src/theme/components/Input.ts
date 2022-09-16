@@ -1,4 +1,4 @@
-export const CustomInput = {
+export const Input = {
   parts: ['control', 'label', 'input'],
   baseStyle: {
     control: {

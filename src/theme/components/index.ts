@@ -1,6 +1,8 @@
 export { Button } from './Button';
-export { CustomInput } from './CustomInput';
-export { CustomTextarea } from './CustomTextarea';
+export { Input } from './Input';
+export { Textarea } from './Textarea';
 export { IconButton } from './IconButton';
 export { Select } from './Select';
-export { Switch } from './Switch';
+export { default as Checkbox } from './Checkbox';
+export { default as Radio } from './Radio';
+export { default as Switch } from './Switch';

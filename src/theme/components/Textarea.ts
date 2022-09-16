@@ -1,4 +1,4 @@
-export const CustomTextarea = {
+export const Textarea = {
   parts: ['control', 'label', 'input'],
   baseStyle: {
     control: {
