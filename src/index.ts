@@ -1,24 +1,18 @@
-// export * from '@chakra-ui/react';
-export { ThemeProvider } from './theme/ThemeProvider';
+export { default as theme } from './theme';
 export { 
   AlertError, 
   AlertSuccess, 
   AlertWarning, 
-  AutoPlayToast, 
   Container, 
   CookiesBar, 
-  DaySchedule, 
   Image, 
   ImageFallbackLoading, 
   // ImageUploads, 
   Loading, 
-  MaintenanceBox, 
-  NewFeatureBox, 
+  SharingBar,
   Toast,
 } from './components/general';
 export { 
-  ClearFiltersButton, 
-  FilterText, 
   FiltersScrollBar, 
 } from './components/backoffice';
 export { 
@@ -34,19 +28,14 @@ export {
   WhatsappButton, 
 } from './components/buttons';
 export {
-  BankSelect,
-  BusinessSelect,
-  Checkbox,
   CurrencyInput,
   DateFilter,
+  DaySchedule,
   Input,
   MonthInput,
   NumberInput,
   PasswordInput,
   PatternInput,
-  Radio,
   Select,
   Textarea,
-  CuisineSelect,
 } from './components/form';
-export { SectionHeading, ShareButton, SharingBar } from './components/landing';

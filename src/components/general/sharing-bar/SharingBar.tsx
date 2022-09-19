@@ -1,6 +1,6 @@
 import { Stack, StackProps } from '@chakra-ui/react';
 import { FaFacebookSquare, FaLinkedin, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
-import { ShareLink } from './sharing-bar/ShareLink';
+import { ShareLink } from './ShareLink';
 
 const mainUrl = 'https://appjusto.com.br/';
 const sharingMsg = encodeURIComponent(

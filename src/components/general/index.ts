@@ -1,15 +1,12 @@
 export { AlertError } from './AlertError';
 export { AlertSuccess } from './AlertSuccess';
 export { AlertWarning } from './AlertWarning';
-export { AutoPlayToast } from './AutoPlayToast';
 export { Container } from './Container';
 export { CookiesBar } from './CookiesBar';
-export { DaySchedule } from './DaySchedule';
 export { Image } from './Image';
 export { ImageFallbackLoading } from './ImageFallbackLoading';
 // export { ImageUploads } from './ImageUploads';
 export { Loading } from './Loading';
-export { MaintenanceBox } from './MaintenanceBox';
 export { MapsMarker } from './MapsMarker';
-export { NewFeatureBox } from './NewFeatureBox';
 export { Toast } from './Toast';
+export { SharingBar } from './sharing-bar/SharingBar';

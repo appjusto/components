@@ -1,14 +1,12 @@
 import { ScheduleObject } from '@appjusto/types';
-import { Flex, HStack, Link, RadioGroup } from '@chakra-ui/react';
-import { PatternInput } from '../form/input/pattern-input/PatternInput';
+import { Checkbox, Flex, HStack, Link, RadioGroup, Radio } from '@chakra-ui/react';
+import { PatternInput } from './input/pattern-input/PatternInput';
 import {
   timeFormatter,
   TimeMask,
-} from '../form/input/pattern-input/formatters';
-import { numbersOnlyParser } from '../form/input/pattern-input/parsers';
+} from './input/pattern-input/formatters';
+import { numbersOnlyParser } from './input/pattern-input/parsers';
 import React from 'react';
-import { Checkbox } from '../form/Checkbox';
-import { Radio } from '../form/Radio';
 
 export type Break = 'break' | 'no-break';
 

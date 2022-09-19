@@ -11,10 +11,11 @@ import { MdArrowDownward } from 'react-icons/md';
 
 interface Props extends SelectProps {
   label?: string;
+  list: { id: string; name: string }[]
 }
 
 export const Select = React.forwardRef<HTMLSelectElement, Props>(
-  ({ label, w, maxW, mt = '4', mb, ml, mr, flex, ...props }: Props, ref) => {
+  ({ label, list, w, maxW, mt = '4', mb, ml, mr, flex, ...props }: Props, ref) => {
     const boxProps = { w, maxW, mt, mb, ml, mr, flex };
     const styles = useMultiStyleConfig('Select', {});
     return (
@@ -24,7 +25,13 @@ export const Select = React.forwardRef<HTMLSelectElement, Props>(
             {label}
           </FormLabel>
         )}
-        <ChakraSelect ref={ref} size="md" sx={styles.select} icon={<Icon as={MdArrowDownward} />} {...props} />
+        <ChakraSelect ref={ref} size="md" sx={styles.select} icon={<Icon as={MdArrowDownward} />} {...props}>
+          {list.map((item) => (
+            <option key={item.id} value={item.name}>
+              {item.name}
+            </option>
+          ))}
+        </ChakraSelect>
       </FormControl>
     );
   }

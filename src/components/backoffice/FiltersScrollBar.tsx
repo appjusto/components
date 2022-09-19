@@ -1,6 +1,7 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import { Box, BoxProps, Center, CenterProps, Icon } from '@chakra-ui/react';
+import { Box, Center, CenterProps, Icon, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { FilterText } from './FilterText';
 
 const IconWrapper = ({ children, ...props }: CenterProps) => {
   return (
@@ -22,7 +23,21 @@ const IconWrapper = ({ children, ...props }: CenterProps) => {
   );
 };
 
-export const FiltersScrollBar = ({ children }: BoxProps) => {
+interface FiltersScrollBarProps {
+  filters?: { label: string; value: string }[];
+  currentValue?: string;
+  selectFilter?(value: string): void;
+  spacing?: number;
+  children?: React.ReactNode;
+}
+
+export const FiltersScrollBar = ({
+  filters,
+  currentValue,
+  selectFilter,
+  spacing = 4,
+  children,
+}: FiltersScrollBarProps) => {
   // state
   const [filtersScroll, setFiltersScroll] = React.useState(0);
   const [scrollArea, setScrollArea] = React.useState<number>();
@@ -62,7 +77,18 @@ export const FiltersScrollBar = ({ children }: BoxProps) => {
         <Icon as={FaChevronLeft} fontSize="18px" />
       </IconWrapper>
       <Box ref={childrenWrapperRef} ml={`${filtersScroll}px`} transition="margin 0.4s">
-        {children}
+        {filters && selectFilter && (
+            <HStack spacing={spacing}>
+              {filters.map((filter) => (
+                <FilterText
+                  isActive={currentValue === filter.value}
+                  label={filter.label}
+                  onClick={() => selectFilter(filter.value)}
+                />
+              ))}
+            </HStack>
+          )}
+          {children}
       </Box>
       <IconWrapper
         right="0"
