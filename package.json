@@ -2,14 +2,15 @@
   "name": "@appjusto/components",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "types": "lib/index.d.ts",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "start": "node lib/index.js",
-    "build": "tsc",
+    "start": "node lib/esm/index.js",
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm version ${VERSION:-patch} && npm publish --access public",
     "postversion": "git push && git push --tags && git fetch"
@@ -21,6 +22,9 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
     "@types/react": "^16.14.32",
     "@types/react-router-dom": "^5.3.3",
     "dayjs": "^1.11.5",
@@ -28,6 +32,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.4.0",
+    "react-router-dom": "^5.3.3",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.7.4"
   }
 }
