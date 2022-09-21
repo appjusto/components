@@ -5,7 +5,6 @@ export {
   AlertWarning, 
   Container, 
   CookiesBar, 
-  Image, 
   ImageFallbackLoading, 
   // ImageUploads, 
   Loading, 

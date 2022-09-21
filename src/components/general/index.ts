@@ -3,7 +3,6 @@ export { AlertSuccess } from './AlertSuccess';
 export { AlertWarning } from './AlertWarning';
 export { Container } from './Container';
 export { CookiesBar } from './CookiesBar';
-export { Image } from './Image';
 export { ImageFallbackLoading } from './ImageFallbackLoading';
 // export { ImageUploads } from './ImageUploads';
 export { Loading } from './Loading';
